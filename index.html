@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NORRA | Fashion &amp; Digital Campaign</title>
+<meta name="description" content="NORRA — a premium fashion brand mini-project: ecommerce storefront plus a multiplatform digital marketing campaign case study across Instagram, TikTok, YouTube, Facebook and Pinterest.">
+<meta name="theme-color" content="#161513">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NORRA | Fashion & Digital Campaign">
+<meta property="og:description" content="A premium fashion brand storefront and multiplatform digital marketing campaign — academic mini project.">
+<meta property="og:image" content="https://picsum.photos/seed/norra-og/1200/630">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👗</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ TOASTS ============ -->
+<div id="toastHost" class="toast-host" aria-live="polite"></div>
+
+<!-- ============ TOP ANNOUNCEMENT ============ -->
+<div class="announce">Free shipping on orders over ₹2,999 · New Season Edit is live</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#home" class="logo" data-nav="home">NORRA</a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#shop" data-nav="shop">Shop</a>
+      <a href="#shop" data-nav="shop" data-collection="collections">Collections</a>
+      <a href="#campaign" data-nav="campaign">Campaign</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#reviews" data-nav="reviews">Reviews</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <a href="#account" class="icon-btn" data-nav="account" aria-label="Account">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      </a>
+      <a href="#favourites" class="icon-btn" data-nav="favourites" aria-label="Favourites">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.6 4c2-.3 3.7.7 4.4 2.2C10.7 4.7 12.4 3.7 14.4 4c3.6.5 5.2 4 3.6 7.7C15.5 16.4 12 21 12 21z"/></svg>
+        <span class="badge" id="favCount">0</span>
+      </a>
+      <a href="#cart" class="icon-btn" data-nav="cart" aria-label="Cart">
+        <svg viewBox="0 0 24 24"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 7H6"/><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
+        <span class="badge" id="cartCount">0</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel">
+    <input type="text" id="searchInput" placeholder="Search products, e.g. “linen shirt”">
+    <button id="searchGo">Search</button>
+  </div>
+</header>
+
+<!-- mobile off-canvas menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" data-nav="home">Home</a>
+  <a href="#shop" data-nav="shop">Shop</a>
+  <a href="#campaign" data-nav="campaign">Campaign</a>
+  <a href="#about" data-nav="about">About</a>
+  <a href="#reviews" data-nav="reviews">Reviews</a>
+  <a href="#contact" data-nav="contact">Contact</a>
+  <a href="#account" data-nav="account">Account</a>
+  <a href="#orders" data-nav="orders">My Orders</a>
+  <a href="#admin-login" data-nav="admin-login">Admin</a>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<main id="app">
+
+  <!-- ================= HOME ================= -->
+  <section class="page" id="page-home" data-page="home">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow-plain">New Season · 2026</p>
+        <h1>NORRA<br>Define Your Style</h1>
+        <p class="hero-tag">Considered fashion for people who dress on their own terms — clean lines, honest fabric, no noise.</p>
+        <div class="hero-cta">
+          <a href="#shop" class="btn btn-dark" data-nav="shop">Shop Collection</a>
+          <a href="#campaign" class="btn btn-outline" data-nav="campaign">Explore Campaign</a>
+        </div>
+      </div>
+      <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="NORRA fashion collection">
+      </div>
+    </section>
+
+    <section class="strip-section">
+      <div class="section-head">
+        <h2>New Arrivals</h2>
+        <a href="#shop" data-nav="shop">View all →</a>
+      </div>
+      <div class="hscroll" id="row-new"></div>
+    </section>
+
+    <section class="strip-section alt">
+      <div class="section-head">
+        <h2>Trending Now</h2>
+        <a href="#shop" data-nav="shop">View all →</a>
+      </div>
+      <div class="hscroll" id="row-trending"></div>
+    </section>
+
+    <section class="strip-section">
+      <div class="section-head">
+        <h2>Best Sellers</h2>
+        <a href="#shop" data-nav="shop">View all →</a>
+      </div>
+      <div class="hscroll" id="row-bestsellers"></div>
+    </section>
+
+    <section class="collection-split">
+      <a href="#shop" class="collection-tile" data-nav="shop" data-gender="Women">
+        <img src="https://picsum.photos/seed/norra-women/700/900" alt="Women's collection">
+        <span>Women</span>
+      </a>
+      <a href="#shop" class="collection-tile" data-nav="shop" data-gender="Men">
+        <img src="https://picsum.photos/seed/norra-men/700/900" alt="Men's collection">
+        <span>Men</span>
+      </a>
+      <a href="#shop" class="collection-tile" data-nav="shop" data-category="Accessories">
+        <img src="https://picsum.photos/seed/norra-acc/700/900" alt="Accessories collection">
+        <span>Accessories</span>
+      </a>
+    </section>
+
+    <section class="strip-section alt">
+      <div class="section-head">
+        <h2>Seasonal Edit</h2>
+        <a href="#shop" data-nav="shop">View all →</a>
+      </div>
+      <div class="hscroll" id="row-seasonal"></div>
+    </section>
+
+    <section class="campaign-teaser">
+      <div>
+        <p class="eyebrow-plain">Academic mini project</p>
+        <h2>The NORRA Digital Campaign</h2>
+        <p>A full multiplatform marketing strategy across Instagram, TikTok, YouTube, Facebook and Pinterest — objectives, content pillars, hashtag strategy and live-style analytics.</p>
+        <a href="#campaign" class="btn btn-dark" data-nav="campaign">View campaign strategy →</a>
+      </div>
+      <img src="https://picsum.photos/seed/norra-campaign/800/600" alt="NORRA campaign moodboard">
+    </section>
+
+    <section class="strip-section" id="reviews">
+      <div class="section-head">
+        <h2>Customer Reviews</h2>
+      </div>
+      <div class="reviews-grid" id="homeReviews"></div>
+    </section>
+
+    <section class="newsletter">
+      <h2>Join the NORRA list</h2>
+      <p>Early access to drops, campaign lookbooks and 10% off your first order.</p>
+      <form id="newsletterForm">
+        <input type="email" required placeholder="you@email.com" id="newsletterEmail">
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+  </section>
+
+  <!-- ================= SHOP ================= -->
+  <section class="page" id="page-shop" data-page="shop">
+    <div class="shop-header">
+      <h1>Shop All</h1>
+      <p id="shopCount">0 products</p>
+    </div>
+
+    <div class="shop-toolbar">
+      <input type="text" id="shopSearch" placeholder="Search products...">
+      <button class="filter-toggle" id="filterToggle">Filters &amp; Sort</button>
+      <select id="sortSelect">
+        <option value="featured">Sort: Featured</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating">Rating</option>
+        <option value="newest">Newest</option>
+      </select>
+    </div>
+
+    <div class="shop-body">
+      <aside class="filters" id="filterDrawer">
+        <div class="filter-drawer-head">
+          <h3>Filters</h3>
+          <button id="closeFilters" aria-label="Close filters">✕</button>
+        </div>
+        <div class="filter-group">
+          <h4>Category</h4>
+          <div id="categoryFilters"></div>
+        </div>
+        <div class="filter-group">
+          <h4>Gender</h4>
+          <div id="genderFilters"></div>
+        </div>
+        <div class="filter-group">
+          <h4>Price</h4>
+          <input type="range" id="priceRange" min="0" max="10000" step="100">
+          <p id="priceLabel">Up to ₹10,000</p>
+        </div>
+        <div class="filter-group">
+          <h4>Minimum Rating</h4>
+          <div id="ratingFilters"></div>
+        </div>
+        <button class="btn btn-outline full" id="clearFilters">Clear all filters</button>
+      </aside>
+      <div class="scrim" id="filterScrim"></div>
+
+      <div class="product-grid" id="shopGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCT DETAIL ================= -->
+  <section class="page" id="page-product" data-page="product">
+    <div id="productDetailRoot"></div>
+    <section class="strip-section">
+      <div class="section-head"><h2>You may also like</h2></div>
+      <div class="hscroll" id="relatedRow"></div>
+    </section>
+  </section>
+
+  <!-- ================= FAVOURITES ================= -->
+  <section class="page" id="page-favourites" data-page="favourites">
+    <div class="shop-header">
+      <h1>Favourites</h1>
+      <p id="favSummary">0 items</p>
+    </div>
+    <div class="page-actions" id="favActions" hidden>
+      <button class="btn btn-outline" id="clearFavs">Remove all</button>
+    </div>
+    <div class="product-grid" id="favGrid"></div>
+    <div class="empty-state" id="favEmpty" hidden>
+      <p>Your wishlist is empty.</p>
+      <a href="#shop" class="btn btn-dark" data-nav="shop">Discover products</a>
+    </div>
+  </section>
+
+  <!-- ================= CART ================= -->
+  <section class="page" id="page-cart" data-page="cart">
+    <div class="shop-header"><h1>Shopping Cart</h1></div>
+    <div class="cart-layout" id="cartLayout">
+      <div class="cart-items" id="cartItems"></div>
+      <aside class="cart-summary" id="cartSummary">
+        <h3>Order Summary</h3>
+        <div class="row"><span>Subtotal</span><span id="cartSubtotal">₹0</span></div>
+        <div class="row" id="discountRow" hidden><span>Coupon discount</span><span id="cartDiscount">-₹0</span></div>
+        <div class="row"><span>Delivery</span><span id="cartDelivery">₹0</span></div>
+        <div class="coupon-box">
+          <input type="text" id="couponInput" placeholder="Coupon code (try NORRA10)">
+          <button id="applyCoupon">Apply</button>
+        </div>
+        <p class="coupon-msg" id="couponMsg"></p>
+        <div class="row total"><span>Total</span><span id="cartTotal">₹0</span></div>
+        <a href="#shop" class="btn btn-outline full" data-nav="shop">Continue Shopping</a>
+        <button class="btn btn-dark full" id="checkoutBtn">Proceed to Checkout</button>
+      </aside>
+    </div>
+    <div class="empty-state" id="cartEmpty" hidden>
+      <p>Your cart is empty.</p>
+      <a href="#shop" class="btn btn-dark" data-nav="shop">Start shopping</a>
+    </div>
+  </section>
+
+  <!-- ================= CHECKOUT ================= -->
+  <section class="page" id="page-checkout" data-page="checkout">
+    <div class="shop-header"><h1>Checkout</h1></div>
+    <form class="checkout-layout" id="checkoutForm">
+      <div class="checkout-fields">
+        <fieldset>
+          <legend>Customer Information</legend>
+          <label>Full Name <input required type="text" id="custName"></label>
+          <label>Email <input required type="email" id="custEmail"></label>
+          <label>Phone <input required type="tel" pattern="[0-9]{10}" id="custPhone" placeholder="10-digit number"></label>
+        </fieldset>
+        <fieldset>
+          <legend>Delivery Address</legend>
+          <label>Address <input required type="text" id="custAddress"></label>
+          <label>City <input required type="text" id="custCity"></label>
+          <label>State <input required type="text" id="custState"></label>
+          <label>Pincode <input required type="text" pattern="[0-9]{6}" id="custPincode"></label>
+        </fieldset>
+        <fieldset>
+          <legend>Payment Method</legend>
+          <div class="payment-options">
+            <label class="pay-opt"><input type="radio" name="payment" value="UPI" checked><span>UPI</span></label>
+            <label class="pay-opt"><input type="radio" name="payment" value="Card"><span>Credit / Debit Card</span></label>
+            <label class="pay-opt"><input type="radio" name="payment" value="COD"><span>Cash on Delivery</span></label>
+          </div>
+          <p class="fine-print">This is a static academic project — no real payment is processed.</p>
+        </fieldset>
+      </div>
+      <aside class="cart-summary">
+        <h3>Order Summary</h3>
+        <div id="checkoutItems"></div>
+        <div class="row total"><span>Total</span><span id="checkoutTotal">₹0</span></div>
+        <button class="btn btn-dark full" type="submit">Place Order</button>
+      </aside>
+    </form>
+  </section>
+
+  <!-- ================= ORDER SUCCESS ================= -->
+  <section class="page" id="page-success" data-page="success">
+    <div class="success-box" id="successBox"></div>
+  </section>
+
+  <!-- ================= MY ORDERS ================= -->
+  <section class="page" id="page-orders" data-page="orders">
+    <div class="shop-header"><h1>My Orders</h1></div>
+    <div id="ordersList"></div>
+    <div class="empty-state" id="ordersEmpty" hidden>
+      <p>No orders yet.</p>
+      <a href="#shop" class="btn btn-dark" data-nav="shop">Start shopping</a>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="page" id="page-about" data-page="about">
+    <section class="about-hero">
+      <img src="https://picsum.photos/seed/norra-about/1000/700" alt="NORRA atelier">
+      <div>
+        <p class="eyebrow-plain">About NORRA</p>
+        <h1>Quiet clothes for loud lives</h1>
+        <p>NORRA was founded on a simple idea: clothing should be considered, not consumed. Every piece is designed to outlast the season it was made for — honest materials, restrained silhouettes, and a palette that never goes out of style. This project reimagines NORRA as a full digital-first fashion brand, from product to campaign.</p>
+        <p>We work with small ateliers, use natural fibres wherever possible, and design every collection around versatility rather than novelty. Our customers keep NORRA pieces for years, not seasons.</p>
+      </div>
+    </section>
+  </section>
+
+  <!-- ================= CAMPAIGN ================= -->
+  <section class="page" id="page-campaign" data-page="campaign">
+    <div class="campaign-hero">
+      <p class="eyebrow-plain">Academic mini project · Marketing strategy</p>
+      <h1>NORRA — New Season Digital Campaign</h1>
+      <p>A multiplatform digital marketing strategy built to launch NORRA's new season across five platforms, each with its own objective, content pillars, posting cadence and hashtag strategy.</p>
+    </div>
+    <div class="platform-cards" id="platformCards"></div>
+
+    <section class="strip-section">
+      <div class="section-head"><h2>Campaign Analytics</h2><p class="muted">Demo data for illustration</p></div>
+      <div class="analytics-kpis" id="kpiCards"></div>
+      <div class="analytics-charts">
+        <div class="chart-card">
+          <h3>Reach by Platform</h3>
+          <svg viewBox="0 0 320 200" id="chartReach" class="bar-chart"></svg>
+        </div>
+        <div class="chart-card">
+          <h3>Engagement Rate by Platform</h3>
+          <svg viewBox="0 0 320 200" id="chartEngagement" class="bar-chart"></svg>
+        </div>
+        <div class="chart-card">
+          <h3>Conversion Funnel</h3>
+          <svg viewBox="0 0 320 200" id="chartFunnel" class="funnel-chart"></svg>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ================= ADMIN LOGIN ================= -->
+  <section class="page" id="page-admin-login" data-page="admin-login">
+    <div class="admin-login-box">
+      <h1>NORRA Admin</h1>
+      <p class="fine-print">Demo-only frontend login — not a real authentication system.</p>
+      <form id="adminLoginForm">
+        <label>Username <input type="text" id="adminUser" required></label>
+        <label>Password <input type="password" id="adminPass" required></label>
+        <button class="btn btn-dark full" type="submit">Log In</button>
+      </form>
+      <p class="fine-print">Demo credentials: <strong>admin</strong> / <strong>norra123</strong></p>
+      <p class="admin-error" id="adminLoginError"></p>
+    </div>
+  </section>
+
+  <!-- ================= ADMIN DASHBOARD ================= -->
+  <section class="page" id="page-admin" data-page="admin">
+    <div class="admin-shell">
+      <aside class="admin-sidebar" id="adminSidebar">
+        <div class="admin-brand">NORRA <span>Admin</span></div>
+        <button data-admin-tab="dashboard" class="active">Dashboard</button>
+        <button data-admin-tab="products">Products</button>
+        <button data-admin-tab="orders">Orders</button>
+        <button data-admin-tab="customers">Customers</button>
+        <button data-admin-tab="reviews">Reviews</button>
+        <button data-admin-tab="favourites">Favourites</button>
+        <button data-admin-tab="campaigns">Campaigns</button>
+        <button data-admin-tab="analytics">Analytics</button>
+        <button data-admin-tab="settings">Settings</button>
+        <button id="adminLogout" class="admin-logout">Log Out</button>
+      </aside>
+      <div class="admin-content" id="adminContent"></div>
+    </div>
+  </section>
+
+  <!-- ================= ACCOUNT ================= -->
+  <section class="page" id="page-account" data-page="account">
+    <div class="shop-header"><h1>My Account</h1></div>
+    <div class="account-layout">
+      <form class="account-card" id="accountForm">
+        <h3>Profile</h3>
+        <label>Name <input type="text" id="accName" required></label>
+        <label>Email <input type="email" id="accEmail" required></label>
+        <label>Phone <input type="tel" id="accPhone"></label>
+        <button class="btn btn-dark" type="submit">Save changes</button>
+      </form>
+      <div class="account-card">
+        <h3>Quick links</h3>
+        <a href="#orders" data-nav="orders" class="account-link">My Orders <span id="accOrdersCount">0</span></a>
+        <a href="#favourites" data-nav="favourites" class="account-link">Favourites <span id="accFavCount">0</span></a>
+        <a href="#account" data-nav="account" class="account-link" id="accReviewsLink">My Reviews <span id="accReviewsCount">0</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="page" id="page-contact" data-page="contact">
+    <div class="shop-header"><h1>Contact Us</h1></div>
+    <div class="contact-layout">
+      <form id="contactForm">
+        <label>Name <input type="text" required id="contactName"></label>
+        <label>Email <input type="email" required id="contactEmail"></label>
+        <label>Message <textarea required id="contactMessage" rows="5"></textarea></label>
+        <button class="btn btn-dark" type="submit">Send Message</button>
+        <p class="success-msg" id="contactSuccess" hidden>Thanks — your message has been received. We'll reply within 2 business days.</p>
+      </form>
+      <div class="contact-info">
+        <h3>Get in touch</h3>
+        <p>📍 42 Anna Salai, Chennai, Tamil Nadu 600002</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ hello@norra-fashion.example</p>
+        <div class="social-row">
+          <span>Instagram</span><span>TikTok</span><span>Pinterest</span><span>YouTube</span><span>Facebook</span>
+        </div>
+        <h4>Business hours</h4>
+        <p>Mon–Sat · 10:00 – 20:00 IST</p>
+        <h4>FAQ</h4>
+        <details><summary>What's your return policy?</summary><p>30-day returns on unworn items with tags attached.</p></details>
+        <details><summary>Do you ship pan-India?</summary><p>Yes, we deliver across India in 3–7 business days.</p></details>
+        <details><summary>Is Cash on Delivery available?</summary><p>Yes, COD is available on orders under ₹15,000.</p></details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="logo footer-logo">NORRA</div>
+      <p>Considered fashion, designed to last. A digital-first brand built for this project's marketing case study.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#shop" data-nav="shop">All Products</a>
+      <a href="#shop" data-nav="shop">Women</a>
+      <a href="#shop" data-nav="shop">Men</a>
+      <a href="#shop" data-nav="shop">Accessories</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#campaign" data-nav="campaign">Campaign</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+      <a href="#admin-login" data-nav="admin-login">Admin</a>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <p>Instagram · TikTok · Pinterest</p>
+      <p>YouTube · Facebook</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 NORRA. Academic mini project — for demonstration only.</p>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<!-- ============ QUICK VIEW MODAL ============ -->
+<div class="modal-overlay" id="quickViewOverlay">
+  <div class="modal quick-view-modal" id="quickViewModal" role="dialog" aria-modal="true"></div>
+</div>
+
+<!-- ============ CONFIRM MODAL ============ -->
+<div class="modal-overlay" id="confirmOverlay">
+  <div class="modal confirm-modal" role="dialog" aria-modal="true">
+    <p id="confirmText">Are you sure?</p>
+    <div class="confirm-actions">
+      <button class="btn btn-outline" id="confirmCancel">Cancel</button>
+      <button class="btn btn-dark" id="confirmOk">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
