@@ -81,18 +81,83 @@ const RAW_PRODUCTS = [
   ["Utility Cargo Trousers","Trousers","Men",3299,null,4.2,39,"new"]
 ];
 const fashionImages = [
-  "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&q=80",
+  // 1. Wool Tailored Coat
+  "https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=600&q=80",
+
+  // 2. Silk Slip Dress
   "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&q=80",
+
+  // 3. Linen Wide Shirt
+  "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+
+  // 4. Relaxed Denim Jeans
   "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=600&q=80",
+
+  // 5. Pleated Midi Skirt
+  "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=600&q=80",
+
+  // 6. Cashmere Blend Sweater
+  "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80",
+
+  // 7. Tailored Trousers
+  "https://images.unsplash.com/photo-1506629905607-d9a7e6e0e8c6?auto=format&fit=crop&w=600&q=80",
+
+  // 8. Oversized Blazer
+  "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80",
+
+  // 9. Merino Wool Hoodie
   "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80"
+
+  // 10. Classic Oxford Shirt
+  "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=600&q=80",
+
+  // 11. Slim Fit Chinos
+  "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=600&q=80",
+
+  // 12. Selvedge Denim Jeans
+  "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80",
+
+  // 13. Overshirt Jacket
+  "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80",
+
+  // 14. Cotton Crewneck Tee
+  "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+
+  // 15. Quilted Bomber
+  "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80",
+
+  // 16. Linen Blend Trousers
+  "https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=600&q=80",
+
+  // 17. Structured Tote Bag
+  "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80",
+
+  // 18. Leather Crossbody Bag
+  "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80",
+
+  // 19. Minimal Leather Belt
+  "https://images.unsplash.com/photo-1624222247344-550fb8d5b5f1?auto=format&fit=crop&w=600&q=80",
+
+  // 20. Wool Scarf
+  "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80",
+
+  // 21. Gold-Tone Hoop Earrings
+  "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80",
+
+  // 22. Leather Ankle Boots
+  "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80",
+
+  // 23. Canvas Low-Top Sneakers
+  "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+
+  // 24. Leather Derby Shoes
+  "https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=600&q=80",
+
+  // 25. Ribbed Knit Dress
+  "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80",
+
+  // 26. Utility Cargo Trousers
+  "https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=600&q=80"
 ];
 const SIZES = ["XS","S","M","L","XL","XXL"];
 const COLORS = ["#161513","#A9834C","#E4DED2","#4A473F","#8A6B4A"];
@@ -105,24 +170,38 @@ const DEMO_REVIEW_TEXTS = [
   "Exactly like the photos, colour is rich and doesn't fade after wash.",
   "Comfortable fabric, would definitely buy another colour."
 ];
-
 function buildProducts(){
   return RAW_PRODUCTS.map((p, i)=>{
     const [name, category, gender, price, oldPrice, rating, reviewCount, tag] = p;
-    const off = oldPrice ? Math.round(((oldPrice-price)/oldPrice)*100) : 0;
+    const off = oldPrice
+      ? Math.round(((oldPrice-price)/oldPrice)*100)
+      : 0;
+
     return {
       id: "p"+(i+1),
-      name, category, gender, price, oldPrice, rating, reviewCount, tag,
-      image: fashionImages[i % fashionImages.length],
-      image2: fashionImages[(i + 3) % fashionImages.length],
+      name,
+      category,
+      gender,
+      price,
+      oldPrice,
+      rating,
+      reviewCount,
+      tag,
+
+      // Correct image according to product order
+      image: fashionImages[i],
+
+      // Use the next product image as secondary image
+      image2: fashionImages[(i+1) % fashionImages.length],
+
       off,
+
       description: `The ${name} is designed in a considered fit with honest materials — a NORRA staple built to be worn season after season. Pairs effortlessly with the rest of the ${gender === "Unisex" ? "collection" : gender + "'s edit"}.`,
+
       stock: 8 + (i % 12)
     };
   });
 }
-
-/* products can be "edited" by admin — persisted separately in localStorage, merged over base data */
 function loadProducts(){
   const base = buildProducts();
   const overrides = LS.get(KEYS.products, {});
