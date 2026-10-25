@@ -83,38 +83,38 @@
     return payload;
   }
 
-  async function initialize() {
-    try {
-      setStatus("Loading cryptography library...", "");
+async function initialize() {
+  try {
+    setStatus("Loading cryptography library...", "");
 
-      // Load the library as an ES module; no window.sodium setup needed.
-      const module = await import(
-        "https://cdn.jsdelivr.net/npm/libsodium-wrappers@0.7.15/+esm"
-      );
+    const module = await import(
+      "https://cdn.jsdelivr.net/npm/libsodium-wrappers@0.7.15/+esm"
+    );
 
-      sodium = module.default || module;
+    sodium = module.default || module;
+    await sodium.ready;
 
-      await sodium.ready;
+    aad = sodium.from_string("NORRA-HYBRID-DEMO-v1");
 
-      aad = utf8("NORRA-HYBRID-DEMO-v1");
-      sodiumReady = true;
-      encryptBtn.disabled = false;
+    sodiumReady = true;
+    encryptBtn.disabled = false;
 
-      setStatus(
-        "Cryptography library ready. Enter a message and encrypt.",
-        "success"
-      );
-    } catch (error) {
-      console.error("NORRA Security Lab initialization error:", error);
-      encryptBtn.disabled = true;
+    setStatus(
+      "Cryptography library ready. Enter a message and encrypt.",
+      "success"
+    );
+  } catch (error) {
+    console.error("NORRA Security Lab initialization error:", error);
+    encryptBtn.disabled = true;
 
-      setStatus(
-        "Crypto library could not load. Check your internet connection and reload.",
-        "error"
-      );
-    }
+    setStatus(
+      "Crypto library failed to load. Check the browser Console.",
+      "error"
+    );
   }
+}
 
+  
   encryptBtn.disabled = true;
   decryptBtn.disabled = true;
   tamperBtn.disabled = true;
