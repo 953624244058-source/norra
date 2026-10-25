@@ -466,3 +466,99 @@ p{line-height:1.6;margin:0;}
 @media (prefers-reduced-motion: reduce){
   *{animation-duration:.001ms !important;transition-duration:.001ms !important;}
 }
+/* ---------- NORRA Security Lab ---------- */
+#page-security {
+  padding-top: 36px;
+  padding-bottom: 50px;
+}
+
+#page-security h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 14px;
+}
+
+#page-security h2,
+#page-security h3 {
+  margin-bottom: 12px;
+}
+
+#page-security p {
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+
+#page-security textarea,
+#page-security input {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+#page-security textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+#page-security button {
+  padding: 12px 20px;
+  margin: 6px 8px 6px 0;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+#page-security button:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+#page-security button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#page-security pre,
+#page-security code,
+#page-security #securityCiphertext,
+#page-security #securityDecrypted {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#page-security #securityStatus,
+#page-security #securityVerifyStatus {
+  padding: 12px 14px;
+  margin: 12px 0;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  border-radius: var(--radius);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  #page-security {
+    padding-top: 24px;
+  }
+
+  #page-security button {
+    width: 100%;
+    margin: 6px 0;
+  }
+}
+/* ---------- End Security Lab ---------- */
