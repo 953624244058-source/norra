@@ -42,6 +42,7 @@
       <a href="#shop" data-nav="shop">Shop</a>
       <a href="#shop" data-nav="shop" data-collection="collections">Collections</a>
       <a href="#campaign" data-nav="campaign">Campaign</a>
+      <a href="#security" data-nav="security">Security Lab</a>
       <a href="#about" data-nav="about">About</a>
       <a href="#reviews" data-nav="reviews">Reviews</a>
       <a href="#contact" data-nav="contact">Contact</a>
@@ -76,6 +77,7 @@
   <a href="#home" data-nav="home">Home</a>
   <a href="#shop" data-nav="shop">Shop</a>
   <a href="#campaign" data-nav="campaign">Campaign</a>
+  <a href="#security" data-nav="security">Security Lab</a>
   <a href="#about" data-nav="about">About</a>
   <a href="#reviews" data-nav="reviews">Reviews</a>
   <a href="#contact" data-nav="contact">Contact</a>
@@ -458,7 +460,58 @@
       </div>
     </div>
   </section>
+```html
+<!-- NORRA SECURITY LAB -->
+<section class="page security-page" id="page-security" data-page="security">
+  <div class="security-hero">
+    <p class="eyebrow-plain">NORRA · DATA &amp; INFORMATION SECURITY</p>
+    <h1>Hybrid Encryption Lab</h1>
+    <p>Explore ECC key agreement with ChaCha20-Poly1305 authenticated encryption.</p>
+  </div>
 
+  <div class="security-notice">
+    <strong>Academic demonstration only.</strong>
+    This demo encrypts only the sample message, not customer or order data.
+  </div>
+
+  <div class="security-lab-grid">
+    <section class="security-card">
+      <h2>1. Enter a message</h2>
+      <label for="securityPlaintext">Plaintext</label>
+      <textarea id="securityPlaintext" rows="5">NORRA sample: protect this message.</textarea>
+      <button class="btn btn-dark" id="securityEncryptBtn" type="button" disabled>Generate keys &amp; encrypt</button>
+      <p class="security-status" id="securityStatus">Waiting for encryption.</p>
+    </section>
+
+    <section class="security-card">
+      <h2>2. Encrypted message</h2>
+      <label for="securityCiphertext">Ciphertext package</label>
+      <textarea id="securityCiphertext" rows="8" readonly></textarea>
+      <div class="security-actions">
+        <button class="btn btn-outline" id="securityDecryptBtn" type="button" disabled>Decrypt &amp; verify</button>
+        <button class="btn btn-outline" id="securityTamperBtn" type="button" disabled>Test tampering</button>
+      </div>
+    </section>
+
+    <section class="security-card security-result-card">
+      <h2>3. Decryption result</h2>
+      <label for="securityDecrypted">Recovered message</label>
+      <textarea id="securityDecrypted" rows="5" readonly></textarea>
+      <p class="security-status" id="securityVerifyStatus">No message verified yet.</p>
+    </section>
+  </div>
+
+  <div class="security-explain">
+    <h2>How Hybrid Encryption Works</h2>
+    <ol>
+      <li>ECC (X25519) establishes a shared secret.</li>
+      <li>BLAKE2b derives a symmetric encryption key.</li>
+      <li>ChaCha20-Poly1305 encrypts and authenticates the message.</li>
+      <li>Tampering with the ciphertext should cause verification to fail.</li>
+    </ol>
+  </div>
+</section>
+```
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -512,5 +565,7 @@
 </div>
 
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/libsodium-wrappers@0.7.15/dist/browsers/sodium.js"></script>
+<script src="security.js"></script>
 </body>
 </html>
