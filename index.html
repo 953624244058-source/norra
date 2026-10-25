@@ -563,9 +563,24 @@
     </div>
   </div>
 </div>
-
 <script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/libsodium@0.7.15/dist/browsers/sodium.js"></script>
-<script src="security.js"></script>
+
+<script>
+window.sodium = {
+  onload: function (sodium) {
+    window.sodium = sodium;
+
+    const securityScript = document.createElement("script");
+    securityScript.src = "security.js";
+    document.body.appendChild(securityScript);
+  }
+};
+</script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/libsodium@0.7.15/dist/browsers/sodium.js"
+  async>
+</script>
 </body>
 </html>
+
