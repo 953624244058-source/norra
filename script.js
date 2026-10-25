@@ -312,7 +312,7 @@ function updateBadges(){
 /* ---------------------------------------------------------
    4. ROUTER
 --------------------------------------------------------- */
-const PAGES = ["home","shop","product","favourites","cart","checkout","success","orders","about","campaign","admin-login","admin","account","contact"];
+const PAGES = ["home","shop","product","favourites","cart","checkout","success","orders","about","campaign","security","admin-login","admin","account","contact"];
 let currentProductId = null;
 let pendingCollectionFilter = null;
 
